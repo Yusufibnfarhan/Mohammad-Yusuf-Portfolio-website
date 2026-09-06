@@ -1,0 +1,643 @@
+﻿<!DOCTYPE html>
+<!--
+    ╔══════════════════════════════════════════════════════════╗
+    ║         PORTFOLIO WEBSITE — Mohammad Yusuf               ║
+    ║         File: index.html                                 ║
+    ╠══════════════════════════════════════════════════════════╣
+    ║  What is HTML?                                           ║
+    ║  HTML = HyperText Markup Language                        ║
+    ║  It is the SKELETON of every website.                    ║
+    ║  It tells the browser WHAT to show on the page.          ║
+    ║                                                          ║
+    ║  Think of it this way:                                   ║
+    ║    HTML  = The skeleton / bones of a building            ║
+    ║    CSS   = The paint, wallpaper, furniture (looks)       ║
+    ║    JS    = The electricity, lifts, doors (behavior)      ║
+    ║                                                          ║
+    ║  HTML uses TAGS like <h1>, <p>, <div> to define content. ║
+    ╚══════════════════════════════════════════════════════════╝
+-->
+
+<html lang="en">
+
+<head>
+    <!-- charset lets the browser show all characters including emojis -->
+    <meta charset="UTF-8">
+    <!-- viewport makes the page scale properly on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The text shown on the browser tab -->
+    <title>Mohammad Yusuf | Portfolio</title>
+    <!-- Link to our external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome: a free icon library loaded from the internet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ═══════════════════════════════════════
+         NAVIGATION BAR
+         Always visible at the top (fixed).
+         Contains your logo + links to sections.
+         ═══════════════════════════════════════ -->
+    <nav class="navbar" id="navbar">
+
+        <!-- Your initials as a logo on the left -->
+        <div class="nav-logo">
+            <span>MY</span>
+        </div>
+
+        <!-- Navigation links — each href="#id" jumps to that section -->
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <!-- Theme Toggle (Dark / Light mode) -->
+            <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Dark and Light Mode" title="Toggle Theme">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </button>
+
+            <!-- Hamburger icon (3 lines) for mobile screens -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+    </nav>
+
+
+    <!-- ═══════════════════════════════════════
+         HERO SECTION
+         The first big section visitors see —
+         your photo, name, title, and buttons.
+         ═══════════════════════════════════════ -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+
+            <img src="images/profile.jpeg" alt="Mohammad Yusuf" class="profile-img">
+
+            <!-- h1 = the biggest, most important heading on the page -->
+            <h1 class="hero-name">Mohammad Yusuf</h1>
+
+            <!-- Typing animation text lives here.
+                 JavaScript fills in the text dynamically. -->
+            <p class="hero-title">
+                <span id="typed-text"></span><span class="cursor">|</span>
+            </p>
+
+            <!-- Short tagline below the title -->
+            <p class="hero-tagline">
+                Driven by curiosity. Building the future with AI &amp; ML. 🚀
+            </p>
+
+            <!-- Buttons linking to social profiles and contact section -->
+            <div class="hero-buttons">
+                <!-- target="_blank" = opens link in a NEW tab -->
+                <a href="https://www.linkedin.com/in/mohammad-yusuf-2160b9401/"
+                   target="_blank" class="btn btn-primary">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/Yusufibnfarhan"
+                   target="_blank" class="btn btn-secondary">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <!-- href="#contact" scrolls smoothly to the contact section -->
+                <a href="#contact" class="btn btn-outline">
+                    Contact Me
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         ABOUT ME SECTION
+         A short introduction about yourself.
+         ═══════════════════════════════════════ -->
+    <section class="section" id="about">
+        <div class="container">
+
+            <h2 class="section-title">About Me</h2>
+            <!-- Decorative underline below the heading -->
+            <div class="section-divider"></div>
+
+            <div class="about-content">
+
+                <!-- Left side: avatar/photo -->
+                <div class="about-image">
+                    <img src="images/profile.jpeg" alt="Mohammad Yusuf" class="about-avatar-img">
+                </div>
+
+                <!-- Right side: text -->
+                <div class="about-text">
+                    <!-- p = paragraph -->
+                    <p>
+                        First-year CSE (AI &amp; Machine Learning) student and tech enthusiast at
+                        <strong>SRM Institute of Science and Technology</strong>.
+                        Passionate about learning how data and algorithms shape the future.
+                    </p>
+                    <p>
+                        Currently building a strong foundation in <strong>Python</strong> and
+                        <strong>C</strong>, while exploring the fundamentals of Artificial Intelligence.
+                        Driven by curiosity and eager to build intelligent solutions that
+                        make a real-world impact.
+                    </p>
+                    <p>
+                        As an active member of the <strong>ACM Student Chapter</strong>,
+                        I believe in learning together and growing as a community.
+                        Always open to collaborating on interesting projects!
+                    </p>
+
+                    <!-- Quick info items: icon + label -->
+                    <div class="about-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Kattankulathur, Chennai</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-university"></i>
+                            <span>SRM IST</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-code-branch"></i>
+                            <span>CSE — AI &amp; ML</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-users"></i>
+                            <span>ACM Student Chapter</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Batch 2026 – 2030</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         EDUCATION SECTION
+         Your academic background.
+         section-alt = light gray background (alternates with white).
+         ═══════════════════════════════════════ -->
+    <section class="section section-alt" id="education">
+        <div class="container">
+
+            <h2 class="section-title">Education</h2>
+            <div class="section-divider"></div>
+
+            <!-- Timeline = a vertical line with cards branching off it -->
+            <div class="timeline">
+
+                <!-- ── Education 1: University (B.Tech) ── -->
+                <div class="timeline-item">
+                    <!-- Dot on the timeline -->
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-content">
+                        <div class="edu-header">
+                            <div class="edu-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h3>B.Tech – CSE (AI &amp; Machine Learning)</h3>
+                                <p class="edu-school">
+                                    <i class="fas fa-university"></i> SRM Institute of Science and Technology, Kattankulathur, Chennai
+                                </p>
+                                <p class="edu-session">
+                                    <i class="far fa-calendar-alt"></i> 2026 – 2030
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="edu-grade-row">
+                            <strong>Status:</strong> <span class="grade-highlight">First Year (Current)</span>
+                        </div>
+
+                        <p class="edu-desc">
+                            Currently in my first year pursuing B.Tech in Computer Science and Engineering with specialization in Artificial Intelligence and Machine Learning at SRM IST. Actively building hands-on development skills as a member of the ACM Student Chapter.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ── Education 2: Class 12 (Senior Secondary) ── -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-content">
+                        <div class="edu-header">
+                            <div class="edu-icon">
+                                <i class="fas fa-atom"></i>
+                            </div>
+                            <div>
+                                <h3>CBSE(XII) – PCM with Computer Science</h3>
+                                <p class="edu-school">
+                                    <i class="fas fa-school"></i> Ewing Christian Public School, Prayagraj, Uttar Pradesh
+                                </p>
+                                <p class="edu-session">
+                                    <i class="far fa-calendar-alt"></i> 2025 – 2026
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="edu-grade-row">
+                            <strong>Grade:</strong> <span class="grade-highlight">70%</span>
+                        </div>
+
+                        <p class="edu-desc">
+                            I completed my class 12th education from Ewing Christian Public School, Prayagraj, under the CBSE board, where I studied Physics, Chemistry, and Mathematics (PCM) with Computer Science. Built a Python Bank Management System for my board project.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ── Education 3: Class 10 (Secondary School) ── -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-content">
+                        <div class="edu-header">
+                            <div class="edu-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div>
+                                <h3>CBSE(X) – Science with Computer</h3>
+                                <p class="edu-school">
+                                    <i class="fas fa-school"></i> Ewing Christian Public School, Prayagraj, Uttar Pradesh
+                                </p>
+                                <p class="edu-session">
+                                    <i class="far fa-calendar-alt"></i> 2023 – 2024
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="edu-grade-row">
+                            <strong>Grade:</strong> <span class="grade-highlight">92%</span>
+                        </div>
+
+                        <p class="edu-desc">
+                            I completed my class 10th education from Ewing Christian Public School, Prayagraj, under the CBSE board, where I studied Science with Computer Application, securing 92% overall with distinction.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         SKILLS SECTION
+         What you know — programming, tools, soft skills.
+         ═══════════════════════════════════════ -->
+    <section class="section" id="skills">
+        <div class="container">
+
+            <h2 class="section-title">Skills</h2>
+            <div class="section-divider"></div>
+
+            <!-- 4 skill category cards in a 2×2 grid -->
+            <div class="skills-grid">
+
+                <!-- Category 1: Programming -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skill-tags">
+                        <!-- Each skill-tag is a colorful pill badge -->
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">HTML(basic)</span>
+                    </div>
+                </div>
+
+                <!-- Category 2: Tools -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools &amp; Software</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Canva</span>
+                        <span class="skill-tag">Antigravity</span>
+                        <span class="skill-tag">GitHub</span>
+                    </div>
+                </div>
+
+                <!-- Category 3: Soft Skills (green badges) -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-users"></i> Soft Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag skill-tag-soft">Team Leadership</span>
+                        <span class="skill-tag skill-tag-soft">Multitasking</span>
+                        <span class="skill-tag skill-tag-soft">Communication</span>
+                        <span class="skill-tag skill-tag-soft">Problem Solving</span>
+                    </div>
+                </div>
+
+                <!-- Category 4: Learning (outlined badges) -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-book-open"></i> Currently Learning</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag skill-tag-learning">AI Fundamentals</span>
+                        <span class="skill-tag skill-tag-learning">Data Structures</span>
+                        <span class="skill-tag skill-tag-learning">CSS</span>
+                        <span class="skill-tag skill-tag-learning">JavaScript</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         PROJECTS SECTION
+         Things you have built or are building.
+         ═══════════════════════════════════════ -->
+    <section class="section section-alt" id="projects">
+        <div class="container">
+
+            <h2 class="section-title">Projects</h2>
+            <div class="section-divider"></div>
+
+            <!-- 3 project cards in a row -->
+            <div class="projects-grid">
+
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-piggy-bank"></i>
+                    </div>
+                    <h3>Bank Management System</h3>
+                    <p>
+                        A Python-based Bank Management System built as my
+                        <strong>Class 12 Board project</strong>. Supports account creation,
+                        deposits, withdrawals, and balance inquiries using file handling.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">File Handling</span>
+                        <span class="project-tag">OOP</span>
+                    </div>
+                    <div class="project-status">
+                        <span class="status-badge status-done">✅ Completed</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>ACM Club Website</h3>
+                    <p>
+                        Built a website for the <strong>ACM Student Chapter</strong> as
+                        part of the recruitment task. Applied HTML, CSS, and JavaScript
+                        in a real-world scenario as a first-year student (took bit of help from AI as it was my first website😅😅).
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JavaScript</span>
+                    </div>
+                    <div class="project-footer">
+                        <span class="status-badge status-done">✅ Completed</span>
+                        <div class="project-links-row">
+                            <!-- Live website link — opens the actual deployed site -->
+                            <a href="https://yusufibnfarhan.github.io/ACM-Quiz-webpage/"
+                               target="_blank" class="project-link project-link-live">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <!-- Source code on GitHub -->
+                            <a href="https://github.com/Yusufibnfarhan" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 — WIP (dashed border card) -->
+                <div class="project-card project-card-wip">
+                    <div class="project-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>SRM Student Marketplace</h3>
+                    <p>
+                        An app for SRM students to <strong>buy and sell used items</strong>
+                        at fair prices — books, calculators, electronics, and more.
+                        Currently in the planning phase. Looking for like-minded
+                        collaborators to build this together! 🤝
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">App Development</span>
+                        <span class="project-tag">Startup Idea</span>
+                    </div>
+                    <div class="project-status">
+                        <span class="status-badge status-wip">🚧 In Progress</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         ACHIEVEMENTS SECTION
+         Your notable accomplishments.
+         ═══════════════════════════════════════ -->
+    <section class="section" id="achievements">
+        <div class="container">
+
+            <h2 class="section-title">Achievements</h2>
+            <div class="section-divider"></div>
+
+            <div class="achievements-grid">
+
+                <!-- Achievement 1: Science Club President -->
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="achievement-text">
+                        <h3>Science Club President</h3>
+                        <p>
+                            Served as the <strong>President of the School Science Club</strong>. Spearheaded and organized hands-on events, including the <strong>Working Model Making Competition</strong>, fostering innovation, scientific curiosity, and peer collaboration across classes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Achievement 2: Green House Captain -->
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-futbol"></i>
+                    </div>
+                    <div class="achievement-text">
+                        <h3>Green House Captain</h3>
+                        <p>
+                            Led the Green House as <strong>Captain</strong>, guiding all house teams to secure 2nd place in the overall inter-house championships. Developed core strengths in team leadership, strategy, and staying resilient under pressure.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Achievement 3: NSO School Gold Medalist -->
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="achievement-text">
+                        <h3>NSO School Gold Medalist</h3>
+                        <p>
+                            Won the <strong>Gold Medal</strong> at the school level in NSO (National Science Olympiad) and qualified for the district level, demonstrating sharp analytical thinking and science acumen.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Achievement 4: ACM Student Chapter Member -->
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="achievement-text">
+                        <h3>ACM Student Chapter — Selected Member</h3>
+                        <p>
+                            Completed the ACM recruitment challenge by engineering a fully responsive interactive website — demonstrating practical frontend development and design skills as a <strong>first-year student</strong>.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         HOBBIES SECTION
+         What you enjoy outside academics.
+         ═══════════════════════════════════════ -->
+    <section class="section section-alt" id="hobbies">
+        <div class="container">
+
+            <h2 class="section-title">Hobbies &amp; Interests</h2>
+            <div class="section-divider"></div>
+
+            <!-- 4 hobby cards in a row -->
+            <div class="hobbies-grid">
+
+                <div class="hobby-card">
+                    <div class="hobby-icon"><i class="fas fa-futbol"></i></div>
+                    <h3>Football</h3>
+                    <p>Passionate player and fan. Former school captain — the sport taught me discipline and leadership.</p>
+                </div>
+
+                <div class="hobby-card">
+                    <div class="hobby-icon"><i class="fas fa-gamepad"></i></div>
+                    <h3>Gaming</h3>
+                    <p>Love strategy and action games. Gaming sharpens problem-solving and quick decision-making.</p>
+                </div>
+
+                <div class="hobby-card">
+                    <div class="hobby-icon"><i class="fas fa-book"></i></div>
+                    <h3>Reading</h3>
+                    <p>Enjoy reading about technology, science, and self-improvement to stay curious and keep growing.</p>
+                </div>
+
+                <div class="hobby-card">
+                    <div class="hobby-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Exploring AI</h3>
+                    <p>Fascinated by Artificial Intelligence and how it is transforming every field and industry.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         CONTACT SECTION
+         How people can reach out to you.
+         ═══════════════════════════════════════ -->
+    <section class="section" id="contact">
+        <div class="container">
+
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="section-divider"></div>
+
+            <p class="contact-intro">
+                Have an idea, a project, or just want to connect?
+                Feel free to reach out — I am always open to conversations! 💬
+            </p>
+
+            <div class="contact-cards">
+
+                <!-- GitHub -->
+                <a href="https://github.com/Yusufibnfarhan" target="_blank" class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p>Yusufibnfarhan</p>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/mohammad-yusuf-2160b9401/" target="_blank" class="contact-card">
+                    <i class="fab fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <p>Mohammad Yusuf</p>
+                </a>
+
+                <!--
+                    EMAIL — ACTION NEEDED!
+                    Replace "yusuf.ibnfarhan@gmail.com" with your real email address
+                    in BOTH: the href="mailto:..." AND the <p> text below.
+                -->
+                <a href="mailto:yusuf.ibnfarhan@gmail.com" class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>yusuf.ibnfarhan@gmail.com</p>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         FOOTER
+         The very bottom of the page.
+         ═══════════════════════════════════════ -->
+    <footer class="footer">
+        <p>
+            Made by <strong>Mohammad Yusuf</strong>
+        </p>
+        <p class="footer-sub">
+            First Year CSE (AI &amp; ML) &nbsp;|&nbsp; SRM IST &nbsp;|&nbsp; ACM Student Chapter
+        </p>
+        <!-- &copy; is the HTML code for the © copyright symbol -->
+        <p class="footer-copy">&copy; 2026 Mohammad Yusuf. All rights reserved.</p>
+    </footer>
+
+
+    <!--
+        Script tag at the BOTTOM of body — very important!
+        JavaScript must run AFTER the HTML is loaded,
+        otherwise it cannot find the elements it needs to control.
+    -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+
