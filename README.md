@@ -141,6 +141,35 @@ As a beginner, here is the curated step-by-step roadmap of concepts demonstrated
 
 ---
 
+---
+
+## 🚀 How to Push this Repository to Your GitHub
+
+Follow these simple 3 steps to publish this repository to your GitHub profile (`Yusufibnfarhan`):
+
+### Step 1: Create a New Repository on GitHub
+1. Go to [github.com/new](https://github.com/new) and log in.
+2. In **Repository name**, enter: `personal-portfolio` (or any name you prefer, like `portfolio`).
+3. Set visibility to **Public**.
+4. **Leave "Add a README file" UNCHECKED** (we already have a complete README here).
+5. Click **Create repository**.
+
+### Step 2: Push Your Local Code to GitHub
+Open PowerShell in this folder (`C:\Users\User\Desktop\My Portfolio`) and run these two commands:
+
+```bash
+git remote add origin https://github.com/Yusufibnfarhan/personal-portfolio.git
+git push -u origin main
+```
+*(GitHub will prompt you to authenticate with your GitHub account in your browser or with a Personal Access Token).*
+
+### Step 3: Enable Free GitHub Pages (Live Website!)
+1. On your newly created GitHub repository page, click **Settings** (gear icon) at the top.
+2. In the left sidebar, click **Pages**.
+3. Under **Branch**, select **`main`** and folder **`/ (root)`**, then click **Save**.
+4. In about 1 minute, your portfolio will be live at:
+   `https://yusufibnfarhan.github.io/personal-portfolio/`
+
 ## 📬 Customization & Contact
 
 - **Author:** Mohammad Yusuf
@@ -150,3 +179,4 @@ As a beginner, here is the curated step-by-step roadmap of concepts demonstrated
 - **Live Project:** [ACM Quiz Webpage](https://yusufibnfarhan.github.io/ACM-Quiz-webpage/)
 
 *Crafted with passion, curiosity, and code for the ACM Student Chapter recruitment.*
+
